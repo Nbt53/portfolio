@@ -1,0 +1,16 @@
+.about {
+
+    &__main {
+        font-size: 1.5rem;
+        padding: 8rem;
+        color: $color-grey-dark-3;
+    }
+
+    &__paragraph{
+
+        &:not(:last-child){
+            margin-bottom: 2rem;
+        }
+    }
+
+}

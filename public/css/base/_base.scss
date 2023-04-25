@@ -8,8 +8,14 @@
 html {
     font-family: 'Roboto', sans-serif;
     font-size: 62.5%;
+
+    @include respond(tab-land) {
+        font-size: 54.5%;
+    }
 }
 
 body {
     box-sizing: border-box;
+    background-image: linear-gradient(to right bottom, $color-grey-light-2 20%, $color-grey-light-3);
+    min-height: 100vh;
 }

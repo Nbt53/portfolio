@@ -1,0 +1,53 @@
+body{
+    font-family: 'Gochi Hand', cursive;
+    background-image:url(/img/paper-background.jpg)
+}
+
+h1 {
+    text-align: center;
+}
+
+.scores{
+    display: none;
+    height: 100px;
+    background-color: aqua;
+    align-self: center;
+}
+
+.board-container {
+    display: none;
+    height: 350px;
+    
+}
+
+.board {
+    height: 60vh;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    height: fit-content;
+    width: fit-content
+}
+
+.col {
+    margin: 2px;
+    padding: 5px;
+    display: inline-block;
+    border: 1px solid black;
+    width: 98px;
+    height: 98px;
+    text-align: center;
+    font-size: 85px;
+}
+
+.controls {
+    display: block;
+    text-align: center;
+}
+
+.new-game{
+    display: inline-block;
+    margin: 10px 0;
+}

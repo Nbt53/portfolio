@@ -12,14 +12,14 @@ const port = 3000
 const dbUrl = 'mongodb://127.0.0.1:27017/template' 
 //set up local mongoose store
 
-mongoose.connect(dbUrl)
-    .then(() => {
-        console.log('database Connected')
-    })
-    .catch(err => {
-        console.log('Mongo connection error')
-        console.log(err)
-    })
+// mongoose.connect(dbUrl)
+//     .then(() => {
+//         console.log('database Connected')
+//     })
+//     .catch(err => {
+//         console.log('Mongo connection error')
+//         console.log(err)
+//     })
 
   // to parse objects
 app.use(express.urlencoded({ extended: true }));
@@ -48,9 +48,15 @@ app.set('views', path.join(__dirname, 'views'));
 //to use css and js
 app.use(express.static(__dirname + '/public'));
 
+//import routes
+const routes = require('./routes/routes')
+
+app.use('/', routes)
+
 app.get('/', (req, res)=>{
     res.render('home')
 })
+
 
 // set up express
 app.listen(port, () => { console.log(` Serving on ${port}. Press ctl + c to exit`) })

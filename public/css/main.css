@@ -6,9 +6,228 @@
 }
 
 html {
+  font-family: "Roboto", sans-serif;
   font-size: 62.5%;
+}
+@media (max-width: 75em) {
+  html {
+    font-size: 54.5%;
+  }
 }
 
 body {
   box-sizing: border-box;
+  background-image: linear-gradient(to right bottom, #f1f3f5 20%, #e9ecef);
+  min-height: 100vh;
+}
+
+.emphasis {
+  font-weight: 500;
+}
+
+.title__main {
+  font-size: 8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #343a40;
+}
+.title__sub {
+  font-size: 5rem;
+  font-weight: 300;
+  text-align: end;
+  align-self: end;
+  letter-spacing: -2px;
+  color: #495057;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.nav__logo {
+  height: 5rem;
+}
+.nav__list {
+  display: flex;
+  align-items: center;
+}
+.nav__item {
+  position: relative;
+  height: 100%;
+  width: 9rem;
+  font-size: 1.75rem;
+  font-weight: 300;
+  list-style: none;
+  text-align: center;
+  margin: 0 2rem;
+}
+@media (max-width: 37.5em) {
+  .nav__item {
+    margin: 0;
+  }
+}
+.nav__item::before {
+  content: "";
+  background-color: #96f2d7;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  transition: all 1s cubic-bezier(0.91, 0.01, 0.24, 0.81);
+}
+.nav__item:hover::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+}
+.nav__link:link, .nav__link:visited {
+  position: relative;
+  text-decoration: none;
+  color: #adb5bd;
+  display: block;
+  padding: 1.5rem;
+  transition: all 1s;
+}
+.nav__link:link:hover, .nav__link:visited:hover {
+  color: #868e96;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  margin: 3rem;
+  border: 1px red solid;
+  border-radius: 10px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+}
+.card__header {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+.card__img {
+  width: 80%;
+  border-radius: 10px;
+  box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.2);
+  transition: all 0.2s;
+}
+.card__img:hover {
+  transform: scale(1.05) translateY(1rem);
+  box-shadow: 0 4rem 5rem rgba(0, 0, 0, 0.2);
+}
+.card__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 2rem;
+}
+.card__body-title {
+  text-align: center;
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+}
+.card__body-description {
+  text-align: center;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 2rem;
+}
+.card__body-description a {
+  text-decoration: none;
+  color: inherit;
+}
+.card__body-link:link, .card__body-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.4rem;
+  margin: 0 auto;
+}
+
+/*
+<div class="card">
+    <div class="card__header">
+        <img src="" alt="" class="card__img">
+    </div>
+    <div class="card__body">
+        <h3 class="card__body-title"></h3>
+        <p class="card__body-description"></p>
+        <a href="" target="_blank" rel="noopener noreferrer" class="card__body-link"></a>
+    </div>
+</div>
+
+*/
+.main {
+  display: flex;
+  justify-content: center;
+  padding: 4rem;
+}
+
+.img-build {
+  height: 25rem;
+  border-radius: 37% 63% 94% 6%/54% 53% 47% 46%;
+}
+
+.bio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  padding: 3rem;
+  color: #495057;
+  line-height: 1.5;
+}
+.bio .end__front {
+  display: inline-block;
+  margin-bottom: 2rem;
+  flex: 0 0 60%;
+}
+.bio .end__back {
+  display: inline-block;
+  flex: 0 0 60%;
+  margin-left: auto;
+  text-align: right;
+}
+
+.about__main {
+  font-size: 1.5rem;
+  padding: 8rem;
+  color: #495057;
+}
+.about__paragraph:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.projects__header {
+  padding: 3rem;
+  width: 90%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.projects__title {
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  color: #495057;
+  text-align: center;
+}
+.projects__title-sub {
+  font-size: 1rem;
+  letter-spacing: 1px;
+  padding: 2rem;
+  color: #495057;
+}
+.projects__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
 }/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,20 @@
+.title{
+
+    &__main{
+        font-size: 8rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: $color-grey-dark-4;
+        
+    }
+
+    &__sub{
+        font-size: 5rem;
+        font-weight: 300;
+        text-align: end;
+        align-self: end;
+        letter-spacing: -2px;
+        color: $color-grey-dark-3;
+    }
+}
+
