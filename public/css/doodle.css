@@ -28,6 +28,7 @@ body {
 }
 
 .pad-canvas {
+    touch-action: none;
     background-image: url("/img/canvas.jpg");
     background-size: 20%;
 }
