@@ -1,0 +1,49 @@
+<% layout('./layouts/boilerplate') -%>
+
+    <div class="contact">
+
+        <div class="contact__body">
+
+            <div class="contact__body-text">
+                <p>
+                    If you're looking for a skilled full-stack web developer to bring your project to life, I would be
+                    happy
+                    to discuss your needs and how I can help. With expertise in both front-end and back-end development,
+                    I
+                    can work with you to create a customized solution that meets your business requirements and exceeds
+                    your
+                    expectations. Whether you need a new website from scratch or want to enhance an existing one, I'm
+                    here
+                    to help. Don't hesitate to reach out to me to start the conversation. I
+                    look forward to hearing from you!
+                </p>
+            </div>
+
+            <div class="contact__body-form">
+                <form action="/contact" method="POST" class="contact__form" enctype="multipart/form-data">
+
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" class="contact__form-inputs" required placeholder="Name">
+
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="email" id="email" class="contact__form-inputs" required
+                        placeholder="E-Mail">
+
+                    <label for="description" required>description:</label>
+                    <textarea name="description" id="description" cols="5" rows="10"
+                        placeholder="Let me know what you need" class="contact__form-inputs contact__form-inputs-text-area" required></textarea>
+
+                    <button class="btn">Submit</button>
+                </form>
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="contact__footer">
+
+
+    </div>
+    </div>

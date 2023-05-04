@@ -1,0 +1,14 @@
+.btn{
+    margin: 2rem;
+    padding: 1rem;
+    border-radius: 25px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all .2s;
+
+    &:hover{
+        transform: scale(1.1);
+    }
+
+}

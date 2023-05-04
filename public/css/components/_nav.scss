@@ -26,6 +26,7 @@
         list-style: none;
         text-align: center;
         margin: 0 2rem;
+        overflow: clip;
 
         @include respond(phone) {
             margin: 0;
@@ -39,10 +40,9 @@
             left: 0;
             height: 100%;
             width: 0;
+            clip-path: polygon(0 0, 62% 0, 100% 100%, 0% 100%);
             transition: all 1s cubic-bezier(.91, .01, .24, .81);
-
-            // transform: scaleY(1);
-
+         
 
         }
 
@@ -50,8 +50,8 @@
 
             content: "";
             position: absolute;
-            // transform: scaleY(1);
             width: 100%;
+            clip-path: polygon(0 0, 80% 0, 100% 100%, 0% 100%);
 
 
         }
@@ -66,10 +66,10 @@
         color: $color-grey-dark-1;
         display: block;
         padding: 1.5rem;
-        transition: all 1s;
+        transition: all .5s .5s;
 
         &:hover{
-            color: $color-grey-dark-2;
+            color: $color-grey-dark-3;
         }
 
     }

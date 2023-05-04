@@ -61,6 +61,7 @@ body {
   list-style: none;
   text-align: center;
   margin: 0 2rem;
+  overflow: clip;
 }
 @media (max-width: 37.5em) {
   .nav__item {
@@ -69,18 +70,22 @@ body {
 }
 .nav__item::before {
   content: "";
-  background-color: #96f2d7;
+  background-color: #ff8787;
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 0;
+  -webkit-clip-path: polygon(0 0, 62% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 62% 0, 100% 100%, 0% 100%);
   transition: all 1s cubic-bezier(0.91, 0.01, 0.24, 0.81);
 }
 .nav__item:hover::before {
   content: "";
   position: absolute;
   width: 100%;
+  -webkit-clip-path: polygon(0 0, 80% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 80% 0, 100% 100%, 0% 100%);
 }
 .nav__link:link, .nav__link:visited {
   position: relative;
@@ -88,10 +93,10 @@ body {
   color: #adb5bd;
   display: block;
   padding: 1.5rem;
-  transition: all 1s;
+  transition: all 0.5s 0.5s;
 }
 .nav__link:link:hover, .nav__link:visited:hover {
-  color: #868e96;
+  color: #495057;
 }
 
 .card {
@@ -162,6 +167,49 @@ body {
 </div>
 
 */
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 0;
+}
+.contact__form label {
+  margin: 1.5rem 0;
+  text-transform: capitalize;
+}
+.contact__form-inputs {
+  color: #495057;
+  width: 80%;
+  background-color: #f1f3f5;
+  border-radius: 40px;
+  padding: 1.4rem 1.5rem;
+  font-family: inherit;
+  border: 1px #868e96 solid;
+  border-bottom: 3px solid red;
+  outline: none;
+}
+.contact__form-inputs:valid {
+  border-bottom: 3px solid green;
+}
+.contact__form-inputs-text-area {
+  height: 11rem;
+  border-radius: 25px;
+  resize: none;
+}
+
+.btn {
+  margin: 2rem;
+  padding: 1rem;
+  border-radius: 25px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn:hover {
+  transform: scale(1.1);
+}
+
 .main {
   display: flex;
   justify-content: center;
@@ -230,4 +278,35 @@ body {
   flex-direction: column;
   align-items: center;
   width: 90%;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 5rem;
+  border: 1px red solid;
+  border-radius: 50px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+}
+.contact__body {
+  display: flex;
+  justify-content: space-around;
+  height: 80%;
+  font-size: 1.4rem;
+}
+.contact__body-text {
+  letter-spacing: 0.2px;
+  line-height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  padding: 5rem;
+}
+.contact__body-form {
+  width: 50%;
+}
+.contact__footer {
+  height: 20%;
+  background-color: yellow;
 }/*# sourceMappingURL=main.css.map */

@@ -5,11 +5,13 @@ const session = require('express-session');
 const ejsMate = require('ejs-mate');
 const path = require('path');
 const methodOverride = require('method-override');
+const helmet = require("helmet");
+const { styleSrcUrls } = require('./whiteList');
 
 //variables for set up
 const secret = '4684a58s4d78f54g1h2ddd58h'
 const port = 3000
-const dbUrl = 'mongodb://127.0.0.1:27017/template' 
+const dbUrl = 'mongodb://127.0.0.1:27017/template'
 //set up local mongoose store
 
 // mongoose.connect(dbUrl)
@@ -21,7 +23,31 @@ const dbUrl = 'mongodb://127.0.0.1:27017/template'
 //         console.log(err)
 //     })
 
-  // to parse objects
+//helmet
+
+app.use(
+  helmet.contentSecurityPolicy({
+    directives: {
+      defaultSrc: [],
+      connectSrc: ["'self'"],
+      scriptSrc: ["'self'"],
+      styleSrc: ["'self'", styleSrcUrls],
+      workerSrc: ["'self'", "blob:"],
+      objectSrc: [],
+      imgSrc: [
+        "'self'",
+        "blob:",
+        "data:",
+      ],
+      fontSrc: ["'self'", "https://fonts.gstatic.com/"],
+      mediaSrc: ["https://res.cloudinary.com/dv5vm4sqh/"],
+      childSrc: ["blob:"]
+    }
+  })
+);
+
+
+// to parse objects
 app.use(express.urlencoded({ extended: true }));
 
 //config up sessions
@@ -49,12 +75,12 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(__dirname + '/public'));
 
 //import routes
-const routes = require('./routes/routes')
+const routes = require('./routes/routes');
 
 app.use('/', routes)
 
-app.get('/', (req, res)=>{
-    res.render('home')
+app.get('/', (req, res) => {
+  res.render('home')
 })
 
 

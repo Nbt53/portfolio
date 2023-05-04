@@ -1,0 +1,66 @@
+body {
+    font-family: 'Lora', serif;
+    box-sizing: border-box;
+    font-size: 62.3%;
+    margin: 0;
+    background-image: url("/img/table.jpg");
+    background-size: 60%;
+}
+
+.pad-body {
+
+    height: 90vh;
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.148);
+    box-shadow: 2px 2px 4px black;
+    margin: 2rem auto;
+    overflow: hidden;
+
+}
+
+
+.pad-header {
+    display: flex;
+    height: 15%;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.pad-canvas {
+    background-image: url("/img/canvas.jpg");
+    background-size: 20%;
+}
+
+.colors {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex: 0 0 33.333%;
+}
+
+.color {
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    border-radius: 100%;
+}
+
+.btn {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    background-color: transparent;
+    border: none;
+    border-radius: 100px;
+    width: 5.5rem;
+    padding: 1rem;
+}
+
+.btn-select {
+    background-color: rgb(202, 226, 165);
+    margin-right: 2rem;
+}
+
+.btn-clear {
+    background-color: rgb(224, 143, 143);
+}
