@@ -31,6 +31,11 @@ body {
   letter-spacing: 1px;
   color: #343a40;
 }
+@media (max-width: 31.25em) {
+  .title__main {
+    font-size: 5.5rem;
+  }
+}
 .title__sub {
   font-size: 5rem;
   font-weight: 300;
@@ -216,17 +221,28 @@ body {
   justify-content: center;
   padding: 4rem;
 }
+@media (max-width: 56.25em) {
+  .main {
+    flex-direction: column;
+  }
+}
 
 .img-build {
   height: 25rem;
   border-radius: 37% 63% 94% 6%/54% 53% 47% 46%;
+}
+@media (max-width: 56.25em) {
+  .img-build {
+    width: 37rem;
+    margin-top: 1rem;
+  }
 }
 
 .bio {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   padding: 3rem;
   color: #495057;
   line-height: 1.5;
@@ -288,12 +304,19 @@ body {
   border: 1px red solid;
   border-radius: 50px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+  padding: 2rem;
 }
 .contact__body {
   display: flex;
   justify-content: space-around;
   height: 80%;
   font-size: 1.4rem;
+}
+@media (max-width: 56.25em) {
+  .contact__body {
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 .contact__body-text {
   letter-spacing: 0.2px;
@@ -304,8 +327,19 @@ body {
   width: 50%;
   padding: 5rem;
 }
+@media (max-width: 56.25em) {
+  .contact__body-text {
+    width: unset;
+  }
+}
 .contact__body-form {
   width: 50%;
+}
+@media (max-width: 56.25em) {
+  .contact__body-form {
+    margin: -6rem;
+    width: unset;
+  }
 }
 .contact__footer {
   height: 20%;

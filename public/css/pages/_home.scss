@@ -2,12 +2,20 @@
     display: flex;
     justify-content: center;
     padding: 4rem;
+
+    @include respond(tab-port) {
+        flex-direction: column;
+    }
 }
 
 .img-build {
     height: 25rem;
     border-radius: 37% 63% 94% 6% / 54% 53% 47% 46%;
 
+    @include respond(tab-port) {
+        width: 37rem;
+        margin-top: 1rem;
+    }
 }
 
 .bio {
@@ -15,7 +23,7 @@
     //flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     padding: 3rem;
     color: $color-grey-dark-3;
     line-height: 1.5;

@@ -5,6 +5,9 @@
         text-transform: uppercase;
         letter-spacing: 1px;
         color: $color-grey-dark-4;
+        @include respond(smallPhone) {
+          font-size: 5.5rem;
+        }
         
     }
 

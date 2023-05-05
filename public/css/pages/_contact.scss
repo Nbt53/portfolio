@@ -5,13 +5,22 @@
     border: 1px red solid;
     border-radius: 50px;
     box-shadow: $shadow-1;
+    padding: 2rem;
+
+    @include respond(tab-port) {}
 
     &__body {
         display: flex;
         justify-content: space-around;
         height: 80%;
         font-size: 1.4rem;
-        
+
+        @include respond(tab-port) {
+            flex-direction: column;
+            justify-content: center;
+        }
+
+
         &-text {
             letter-spacing: 0.2px;
             line-height: 3.5rem;
@@ -20,11 +29,22 @@
             justify-content: center;
             width: 50%;
             padding: 5rem;
-            
+
+            @include respond(tab-port) {
+                width: unset;
+            }
+
+
         }
 
         &-form {
             width: 50%;
+
+            @include respond(tab-port) {
+                margin: -6rem;
+                width: unset;
+            }
+
         }
     }
 
