@@ -54,13 +54,13 @@ for (i = 0; i < selectColor.length; i++) {
 
 
 ////////////turn drawing on/off ////////////////////////
-$("canvas").mousedown(() => {
+$("canvas").on("mousedown touchstart")(() => {
     isDrawing = true;
     lastX = event.clientX - canvas.offsetLeft;
     lastY = event.clientY - canvas.offsetTop;
 });
 
-$("body").mouseup(() => {
+$("body").on("mouseup touchend")(() => {
     isDrawing = false;
     prevX = null;
     prevY = null;
@@ -68,6 +68,17 @@ $("body").mouseup(() => {
 
 ///////DRAW!!!////////
 addEventListener('mousemove', (e) => {
+    if (isDrawing) {
+        if (drawStyle === 'draw') {
+            draw(currentMousePos.x, currentMousePos.y);
+        } else if (drawStyle === 'drawAnchored') {
+            drawAnchored(currentMousePos.x, currentMousePos.y, lastX, lastY);
+        }
+
+    }
+})
+
+addEventListener('touchmove', (e) => {
     if (isDrawing) {
         if (drawStyle === 'draw') {
             draw(currentMousePos.x, currentMousePos.y);
