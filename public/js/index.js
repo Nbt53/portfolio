@@ -26,8 +26,10 @@ canvas.height = container.clientHeight; /* Set the canvas height to its computed
 ///////////////////get mouse pos//////////
 let offset = $("canvas").offset();
 let currentMousePos = { x: -1, y: -1 };
-$(".pad-canvas").mousemove(() => {
+
+$(".pad-canvas").on("mousemove touchstart", () => {
     const rect = canvas.getBoundingClientRect();
+    let touch = event.touches && event.touches.length ? event.touches[0] : null;
     currentMousePos.x = event.clientX - rect.left;
     currentMousePos.y = event.clientY - rect.top;
 })
@@ -54,20 +56,24 @@ for (i = 0; i < selectColor.length; i++) {
 
 
 ////////////turn drawing on/off ////////////////////////
-$("canvas").on("mousedown touchstart")(() => {
+$("canvas").on("mousedown touchstart", () => {
+    event.preventDefault();
     isDrawing = true;
     lastX = event.clientX - canvas.offsetLeft;
     lastY = event.clientY - canvas.offsetTop;
 });
 
-$("body").on("mouseup touchend")(() => {
+$("body").on("mouseup touchend", () => {
+    event.preventDefault();
     isDrawing = false;
     prevX = null;
     prevY = null;
 });
 
 ///////DRAW!!!////////
-addEventListener('mousemove', (e) => {
+addEventListener('mousemove', () => {
+
+    console.log("here")
     if (isDrawing) {
         if (drawStyle === 'draw') {
             draw(currentMousePos.x, currentMousePos.y);
@@ -91,6 +97,7 @@ addEventListener('touchmove', (e) => {
 
 ///////////free Draw function/////////////////
 const draw = (x, y) => {
+    event.preventDefault();
     ctx.strokeStyle = ctx.fillStyle;
     if (prevX != null && prevY != null) {
         ctx.beginPath();
