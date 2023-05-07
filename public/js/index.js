@@ -28,7 +28,6 @@ let offset = $("canvas").offset();
 let currentMousePos = { x: -1, y: -1 };
 
 $(".pad-canvas").on("mousemove touchstart", () => {
-    alert("touch")
     const rect = canvas.getBoundingClientRect();
     let touch = event.touches && event.touches.length ? event.touches[0] : null;
     currentMousePos.x = event.clientX - rect.left;
@@ -58,6 +57,7 @@ for (i = 0; i < selectColor.length; i++) {
 
 ////////////turn drawing on/off ////////////////////////
 $("canvas").on("mousedown touchstart", () => {
+    alert("touchstart")
     event.preventDefault();
     isDrawing = true;
     lastX = event.clientX - canvas.offsetLeft;
@@ -65,6 +65,7 @@ $("canvas").on("mousedown touchstart", () => {
 });
 
 $("body").on("mouseup touchend", () => {
+    alert("touchend")
     event.preventDefault();
     isDrawing = false;
     prevX = null;
