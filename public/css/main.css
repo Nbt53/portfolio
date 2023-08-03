@@ -485,6 +485,20 @@ body {
   }
 }
 
+.project {
+  display: flex;
+  flex-direction: column;
+}
+.project-list {
+  display: flex;
+  justify-content: space-around;
+}
+.project-item {
+  text-transform: capitalize;
+  font-size: 3rem;
+  display: block;
+}
+
 .projects {
   display: flex;
   flex-direction: column;

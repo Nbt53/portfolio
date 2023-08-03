@@ -1,91 +1,21 @@
 <% layout('./layouts/boilerplate') -%>
-    <div class="projects">
 
-        <div class="projects__header">
-            <h1 class="projects__title">My Projects</h1>
+    <section class="project">
+        <h1 class="project__title">My Projects</h1>
 
+        <div class="project-list">
+            <p class="project-item" data-project="loveBird">Lovebird[website]</p>
+            <p class="project-item" data-project="crosses">noughts and crosses[HTML game]</p>
+            <p class="project-item" data-project="clock">Digital Clock[Web Widget]</p>
+            <p class="project-item" data-project="doodle">Doodle Pad[Web Widget]</p>
 
         </div>
-        <section class="projects__section">
 
-            <h2 class="projects__title-sub">
-                My own Projects
-            </h2>
+        <div class="project-container">
 
-            <div class="card">
-                <div class="card__header">
-                    <img src="/img/lovebird-screenshot.png" alt="" class="card__img">
-                </div>
-                <div class="card__body">
-                    <h3 class="card__body-title">Love Bird</h3>
-                    <p class="card__body-description">
-                        This website is an online store for showcasing and selling art, and also allows customers to
-                        request custom art pieces. It was my first attempt at building a website, and I took inspiration
-                        from Jonas Schmedtmann's Advanced CSS and Sass: Flexbox, Grid, Animations and More! course for
-                        the homepage design. The website is built using Node.js, Express, JavaScript, Mongoose, and ejs,
-                        and the code is available to view online, you can check out the code <a
-                            href="https://github.com/Nbt53/demo-website" target="_blank"
-                            rel="noopener noreferrer">here</a>.
-
-                    </p>
+        </div>
+    </section>
 
 
-                    <a href="https://lovebird.onrender.com/" class="card__body-link btn" target="_blank"
-                        rel="noopener noreferrer">Visit the site</a>
-                </div>
-            </div>
 
-            <div class="card">
-                <div class="card__header">
-                    <img src="img/crosses-screenshot.png" alt="" class="card__img">
-                </div>
-                <div class="card__body">
-                    <h3 class="card__body-title">Noughts and Crosses</h3>
-                    <p class="card__body-description">
-                        This is a noughts and crosses game developed using JavaScript, which utilizes CSS for certain
-                        visual features. The codebase features a simplified architecture, enabling straightforward
-                        implementation and modification.
-                    </p>
-                    <a href="/crosses" target="_blank" rel="noopener noreferrer" class="card__body-link btn">play</a>
-                </div>
-            </div>
-
-
-            <div class="card">
-                <div class="card__header">
-                    <img src="/img/doodle.png" alt="" class="card__img">
-                </div>
-                <div class="card__body">
-                    <h3 class="card__body-title">Doodle pad</h3>
-                    <p class="card__body-description"> A web app using JavaScript, HTML, jQuery, and CSS. It's a
-                        drawing pad that lets you change the pen color. You can draw lines in different colors and
-                        thicknesses and erase parts of your drawing. It's easy to use and has a clean interface.</p>
-                    <a href="/doodle" target="_blank" rel="noopener noreferrer" class="card__body-link btn">Try Me</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card__header">
-                    <img src="/img/clock.png" alt="" class="card__img">
-                </div>
-                <div class="card__body">
-                    <h3 class="card__body-title">Clock</h3>
-                    <p class="card__body-description"> This digital clock, created using HTML, CSS, and JS, displays the
-                        current time using clip path and absolute positioning. Each digit is made using a separate div
-                        element and styled with unique shapes for each number. The time is extracted using JavaScript's
-                        Date() object and displayed in the respective div elements using a loop to add a class for the
-                        appropriate digit. Overall, this clock is a great example of creating an interactive and
-                        visually appealing clock for any website.</p>
-                    <a href="/clock" target="_blank" rel="noopener noreferrer" class="card__body-link btn">Check what time it is</a>
-                </div>
-            </div>
-
-        </section>
-
-        <section class="projects__section">
-            <h2 class="projects__title-sub">
-                Tutorial Projects
-            </h2>
-        </section>
-
-    </div>
+    <script src="js/projects.js"></script>
