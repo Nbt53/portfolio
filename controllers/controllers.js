@@ -16,3 +16,11 @@ module.exports.renderContact = (req, res) => {
 module.exports.renderDoodle = (req, res) =>{
     res.render('pages/doodle')
 }
+
+module.exports.renderClock = (req, res) =>{
+    res.render('pages/clock')
+}
+
+module.exports.renderSpace = (req, res) =>{
+    res.render('pages/invaders')
+}

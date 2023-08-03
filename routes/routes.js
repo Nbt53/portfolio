@@ -1,5 +1,5 @@
 const express = require('express');
-const { renderAbout, renderProjects, renderCrosses, renderContact, renderDoodle } = require('../controllers/controllers');
+const { renderAbout, renderProjects, renderCrosses, renderContact, renderDoodle, renderClock, renderSpace } = require('../controllers/controllers');
 const router = express.Router();
 
 router.route('/about')
@@ -17,5 +17,10 @@ router.route("/doodle")
 router.route('/contact')
     .get(renderContact)
 
+router.route('/clock')
+    .get(renderClock)
+
+router.route('/invaders')
+    .get(renderSpace)
 
 module.exports = router

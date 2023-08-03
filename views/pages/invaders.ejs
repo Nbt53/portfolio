@@ -1,0 +1,59 @@
+<% layout('./layouts/boilerplate') -%>
+
+        
+    <div class="invaders">
+
+        <h1 class="invaders__title">Space Guys</h1>
+
+        <div class="invaders__game">
+            <div class="score">500</div>
+<div class="health">
+    <ion-icon name="heart" class="health__heart health-1"></ion-icon>
+    <ion-icon name="heart" class="health__heart health-2"></ion-icon>
+    <ion-icon name="heart" class="health__heart health 3"></ion-icon>
+</div>
+
+
+            <span class="planet"></span>
+
+            <div class="beam"></div>
+
+            <div class="alien__container">
+                <div class="alien">
+                    <div class="alien__head"> O o <br> <span class="alien__mouth">L</span></div>
+                    <div class="alien__body">
+                        <div class="alien__right-arm"></div>
+                        <div class="alien__torso"></div>
+                        <div class="alien__left-arm"></div>    
+                    </div>
+                    <div class="alien__legs">
+                        <div class="alien__right-leg"></div>
+                        <div class="alien__left-leg"></div>
+                    </div>
+                </div>
+    
+            </div>
+
+            <div class="guy__container">
+                <div class="guy">
+                    <div class="head"></div>
+                    <div class="guy__body">
+                        <div class="left-arm"></div>
+                        <div class="body"></div>
+                        <div class="right-arm"></div>
+                    </div>
+                    <div class="left-lef"></div>
+                    <div class="right-leg"></div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <button class="invaders__btn">Start Game</button>
+
+    </div>
+
+
+
+    <script src="/js/invaders.js"></script>

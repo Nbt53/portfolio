@@ -57,7 +57,6 @@ for (i = 0; i < selectColor.length; i++) {
 
 ////////////turn drawing on/off ////////////////////////
 $("canvas").on("mousedown touchstart", () => {
-    alert("touchstart")
     event.preventDefault();
     isDrawing = true;
     lastX = event.clientX - canvas.offsetLeft;
@@ -65,7 +64,6 @@ $("canvas").on("mousedown touchstart", () => {
 });
 
 $("body").on("mouseup touchend", () => {
-    alert("touchend")
     event.preventDefault();
     isDrawing = false;
     prevX = null;
@@ -73,9 +71,9 @@ $("body").on("mouseup touchend", () => {
 });
 
 ///////DRAW!!!////////
-addEventListener('mousemove', () => {
+addEventListener('mousemove touchmove', () => {
 
-    console.log("here")
+    console.log(currentMousePos.y)
     if (isDrawing) {
         if (drawStyle === 'draw') {
             draw(currentMousePos.x, currentMousePos.y);
@@ -86,16 +84,16 @@ addEventListener('mousemove', () => {
     }
 })
 
-addEventListener('touchmove', (e) => {
-    if (isDrawing) {
-        if (drawStyle === 'draw') {
-            draw(currentMousePos.x, currentMousePos.y);
-        } else if (drawStyle === 'drawAnchored') {
-            drawAnchored(currentMousePos.x, currentMousePos.y, lastX, lastY);
-        }
+// addEventListener('touchmove', (e) => {
+//     if (isDrawing) {
+//         if (drawStyle === 'draw') {
+//             draw(currentMousePos.x, currentMousePos.y);
+//         } else if (drawStyle === 'drawAnchored') {
+//             drawAnchored(currentMousePos.x, currentMousePos.y, lastX, lastY);
+//         }
 
-    }
-})
+//     }
+// })
 
 ///////////free Draw function/////////////////
 const draw = (x, y) => {

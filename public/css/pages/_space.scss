@@ -1,0 +1,247 @@
+
+.invaders {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: black;
+
+    &__title {
+        font-size: 8rem;
+        text-transform: uppercase;
+        text-shadow: green 1px 0rem 0.1px;
+        margin-bottom: 3rem;
+    }
+
+    &__game {
+        background-image: url('/img/stars.jpg');
+        position: relative;
+        min-height: 50rem;
+        min-width: 100rem;
+        box-shadow: green 1px 1px 3rem 0.1px;
+        margin-bottom: 5rem;
+        border-radius: 10px;
+        overflow: hidden;
+
+    }
+
+    &__btn {
+        background: unset;
+        border: unset;
+
+        width: 20rem;
+        height: 5rem;
+        border-radius: 100px;
+
+        color: green;
+        box-shadow: green 1px 1px 3rem 0.1px;
+
+        &:hover {
+            transform: scale(1.1);
+            box-shadow: green 1px 1px 3.2rem 0.1px;
+        }
+
+        &:active {
+            transform: scale(0.9);
+            box-shadow: green 1px 1px 1.4rem 0.1px;
+        }
+    }
+
+}
+
+
+///////assets///////
+/// guy
+.guy {
+    transition: all .2s;
+
+    &__container {
+        display: none;
+    }
+
+    display: flex;
+    flex-direction: column;
+
+    &__body {
+        display: flex;
+        margin: 0 auto;
+    }
+
+    .head {
+        height: 2rem;
+        width: 2rem;
+        background-image: linear-gradient(to bottom, black 10%, bisque 90%);
+        margin: 0 auto;
+    }
+
+    .body {
+        height: 4rem;
+        width: 3rem;
+        background-color: green;
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+    }
+
+    .left-arm,
+    .right-arm {
+        height: 4rem;
+        width: 2rem;
+        background-image: linear-gradient(to bottom, green 80%, bisque 20%);
+
+    }
+
+
+}
+
+///alien
+.alien__container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 10rem;
+    width: 6rem;
+    z-index: 450;
+
+}
+
+.alien {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    &__head {
+        text-align: center;
+        background-color: gray;
+        border-radius: 40% 40% 0 0;
+        height: 25%;
+        width: 30%;
+    }
+
+    &__mouth {
+        display: inline-block;
+        transform: rotate(90deg);
+    }
+
+    &__body {
+        display: flex;
+        width: 100%;
+        height: 35%;
+        justify-content: center;
+
+    }
+
+    &__torso {
+        width: 50%;
+        height: 100%;
+        background-color: grey;
+    }
+
+
+    &__right-arm,
+    &__left-arm {
+        background-color: grey;
+        width: 15%;
+        height: 100%;
+        border-left: 1px black solid;
+        border-right: 1px black solid;
+    }
+
+    &__right-arm {
+        border-top-left-radius: 100%;
+    }
+
+    &__left-arm {
+        border-top-right-radius: 100%;
+    }
+
+    &__legs {
+        height: 40%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__right-leg,
+    &__left-leg {
+        height: 100%;
+        width: 20%;
+        background-color: gray;
+        border-top: 1px solid black;
+        margin: 0 0.2rem;
+        transition: all .2s;
+    }
+
+    &__left-leg {
+        transform: translateY(-3px);
+        animation: alienWalkLeft 0.4s infinite;
+
+    }
+
+    &__right-leg {
+        transform: translateY(-3px);
+        animation: alienWalkRight 0.4s infinite;
+
+    }
+
+    &:hover {
+        .alien__right-leg {
+            transform: translateY(-3px);
+        }
+
+        .alien__left-leg {
+            transform: translateY(0);
+        }
+    }
+
+    animation: alienWalk 1s;
+}
+
+///planet
+.planet {
+    position: absolute;
+    display: block;
+    top: calc(100% - 70%);
+    width: 100%;
+    height: 70%;
+    border-radius: 100% 100% 0 0;
+    background-color: red;
+
+    z-index: 100;
+}
+
+///beam
+.beam {
+    position: absolute;
+    top: -8%;
+    left: 44%;
+    z-index: 1500;
+    height: 25rem;
+    width: 16rem;
+    background-color: rgb(85, 219, 85);
+    -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+
+///////////////hud//////////////
+/// score
+.score {
+    position: absolute;
+    right: 0;
+    margin: 1rem;
+    color: white;
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+///health
+.health {
+
+    &__heart {
+        font-size: 4rem;
+        fill: white;
+        margin: .8rem;
+    }
+}

@@ -4,7 +4,10 @@ const whiteList = [
     "https://stackpath.bootstrapcdn.com/",
     "https://cdn.jsdelivr.net/",
     "https://fonts.googleapis.com/",
-    "https://fonts.gstatic.com/"
+    "https://fonts.gstatic.com/",
+    "https://unpkg.com/",
+    "https://code.jquery.com/"
+
 ]
 
 module.exports.whiteList = whiteList

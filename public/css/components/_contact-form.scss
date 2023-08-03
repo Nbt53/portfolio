@@ -3,7 +3,11 @@
     flex-direction: column;
     align-items: center;
     padding: 3rem 0;
-   
+
+    @include respond(phone) {
+        padding: 1rem;
+    }
+
 
     label {
         margin: 1.5rem 0;
@@ -21,7 +25,11 @@
         border-bottom: 3px solid red;
         outline: none;
 
-        &:valid{
+        @include respond(smallPhone) {
+            width: 50%;
+        }
+
+        &:valid {
             border-bottom: 3px solid green;
         }
 

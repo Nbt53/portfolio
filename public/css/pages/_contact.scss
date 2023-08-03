@@ -7,19 +7,27 @@
     box-shadow: $shadow-1;
     padding: 2rem;
 
-    @include respond(tab-port) {}
+    @include respond(phone) {
+        padding: 1rem;
+        padding-bottom: 5rem;
+    }
+
 
     &__body {
         display: flex;
         justify-content: space-around;
         height: 80%;
-        font-size: 1.4rem;
+        font-size: 2.4rem;
+        
 
         @include respond(tab-port) {
             flex-direction: column;
             justify-content: center;
         }
 
+        @include respond(smallPhone) {
+            font-size: 1.2rem ;
+         }
 
         &-text {
             letter-spacing: 0.2px;

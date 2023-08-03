@@ -6,7 +6,7 @@ const ejsMate = require('ejs-mate');
 const path = require('path');
 const methodOverride = require('method-override');
 const helmet = require("helmet");
-const { styleSrcUrls } = require('./whiteList');
+const { styleSrcUrls, whiteList } = require('./whiteList');
 
 //variables for set up
 const secret = '4684a58s4d78f54g1h2ddd58h'
@@ -29,9 +29,9 @@ app.use(
   helmet.contentSecurityPolicy({
     directives: {
       defaultSrc: [],
-      connectSrc: ["'self'"],
-      scriptSrc: ["'self'"],
-      styleSrc: ["'self'", styleSrcUrls],
+      connectSrc: ["'self'", ...whiteList],
+      scriptSrc: ["'self'", ...whiteList],
+      styleSrc: ["'self'", ...whiteList],
       workerSrc: ["'self'", "blob:"],
       objectSrc: [],
       imgSrc: [

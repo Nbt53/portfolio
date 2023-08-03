@@ -1,23 +1,26 @@
 .title{
 
     &__main{
-        font-size: 8rem;
+        font-size: 10rem;
         text-transform: uppercase;
         letter-spacing: 1px;
         color: $color-grey-dark-4;
         @include respond(smallPhone) {
-          font-size: 5.5rem;
+          font-size: 6.5rem;
         }
         
     }
 
     &__sub{
-        font-size: 5rem;
+        font-size: 7rem;
         font-weight: 300;
         text-align: end;
         align-self: end;
         letter-spacing: -2px;
         color: $color-grey-dark-3;
     }
+    @include respond(smallPhone) {
+        font-size: 4.5rem;
+      }
 }
 
