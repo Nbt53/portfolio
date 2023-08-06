@@ -20,7 +20,7 @@ const crosses = {
 
 }
 const doodle = {
-    name: 'Love bird',
+    name: 'Doodle Pad',
     type: 'Web Widget',
     link: '/doodle',
     git: "https://github.com/Nbt53/demo-website",

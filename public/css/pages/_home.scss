@@ -6,6 +6,10 @@
 
     @include respond(tab-port) {
         flex-direction: column;
+        
+    }
+    @include respond(phone) {
+        padding: 2rem;
     }
 }
 
@@ -14,7 +18,7 @@
     border-radius: 37% 63% 94% 6% / 54% 53% 47% 46%;
     margin: 0 auto;
 
-    @include respond(tab-port) {
+    @include respond(phone) {
         width: 37rem;
         margin-top: 1rem;
     }
@@ -42,6 +46,28 @@
             flex: 0 0 60%;
             margin-left: auto;
             text-align: right;
+        }
+    }
+
+    @include respond(phone) {
+        padding: 4rem 4rem;
+        font-size: 2rem;
+        justify-content: center;
+        flex-direction: column;
+
+        .end {
+            &__front {
+                display: inline-block;
+                margin-bottom: 5rem;
+                flex: 0 0 80%;
+            }
+
+            &__back {
+                display: inline-block;
+                flex: 0 0 80%;
+                margin-left: auto;
+                text-align: right;
+            }
         }
     }
 }

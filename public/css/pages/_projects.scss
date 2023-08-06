@@ -4,6 +4,14 @@
     margin-bottom: 5rem;
     padding-top: 5rem;
 
+    &-project{
+        display: flex;
+        flex-direction: column;
+        @include respond(tab-port) {
+            flex-direction: column-reverse;
+        }
+    }
+
     &-title {
         color: $color-grey-dark-3;
         font-size: 4rem;
