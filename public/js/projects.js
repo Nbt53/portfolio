@@ -31,8 +31,8 @@ const doodle = {
 const clock = {
     name: 'Digital Clock',
     type: 'Web Widget',
-    link: 'https://lovebird.onrender.com/',
-    git: "https://github.com/Nbt53/demo-website",
+    link: '/clock',
+    git: "",
     image: "/img/clock.png",
     description: "This digital clock, created using HTML, CSS, and JS, displays the current time using clip path and absolute positioning. Each digit is made using a separate div element and styled with unique shapes for each number. The time is extracted using JavaScript's Date() object and displayed in the respective div elements using a loop to add a class for the appropriate digit."
 }
@@ -63,7 +63,7 @@ const showProject = (p) => {
 
 
         <a href="${p.link}" class="card__body-link btn" target="_blank"
-            rel="noopener noreferrer">view the ${p.type}/a>
+            rel="noopener noreferrer">view the ${p.type}</a>
     </div>
 `
 }
