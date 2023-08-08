@@ -71,9 +71,7 @@ $("body").on("mouseup touchend", () => {
 });
 
 ///////DRAW!!!////////
-addEventListener('mousemove touchmove', () => {
-
-    console.log(currentMousePos.y)
+addEventListener('mousemove' , () => {
     if (isDrawing) {
         if (drawStyle === 'draw') {
             draw(currentMousePos.x, currentMousePos.y);
@@ -84,16 +82,16 @@ addEventListener('mousemove touchmove', () => {
     }
 })
 
-// addEventListener('touchmove', (e) => {
-//     if (isDrawing) {
-//         if (drawStyle === 'draw') {
-//             draw(currentMousePos.x, currentMousePos.y);
-//         } else if (drawStyle === 'drawAnchored') {
-//             drawAnchored(currentMousePos.x, currentMousePos.y, lastX, lastY);
-//         }
+addEventListener('touchmove', (e) => {
+    if (isDrawing) {
+        if (drawStyle === 'draw') {
+            draw(currentMousePos.x, currentMousePos.y);
+        } else if (drawStyle === 'drawAnchored') {
+            drawAnchored(currentMousePos.x, currentMousePos.y, lastX, lastY);
+        }
 
-//     }
-// })
+    }
+})
 
 ///////////free Draw function/////////////////
 const draw = (x, y) => {
