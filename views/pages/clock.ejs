@@ -11,29 +11,31 @@
 
 <body>
 
-    <div class="time"></div>
+    <div class="time" style="display: none;"></div>
     <div class="clock">
 
         <div class="clock-main">
-
-            <div class="clock-digit-one clock-digit"></div>
-            <div class="clock-digit-two clock-digit"></div>
-
+            <div class="clock-digit-section">
+                <div class="clock-digit-one clock-digit"></div>
+                <div class="clock-digit-two clock-digit"></div>
+            </div>
             <div class="separator">
                 <div class="separator-circle"></div>
                 <div class="separator-circle"></div>
             </div>
-
-            <div class="clock-digit-three clock-digit"></div>
-            <div class="clock-digit-four clock-digit"></div>
-
-            <div class="clock-sub">
-                <p class="clock-seconds"></p>
+            <div class="clock-digit-section">
+                <div class="clock-digit-three clock-digit"></div>
+                <div class="clock-digit-four clock-digit"></div>
             </div>
-
         </div>
+        <div class="clock-sub">
+            <p class="clock-seconds"></p>
+        </div>
+
+
     </div>
-    <script src="/js/clock.js"></script>
+
+    <script src="clock.js"></script>
 </body>
 
 </html>
