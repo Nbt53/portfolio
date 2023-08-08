@@ -1,12 +1,10 @@
-.time{
-  display: none;
-}
 .clock {
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+  padding: 2rem 0;
   margin: 0 auto;
   background-color: grey;
+  width: 100vw;
 }
 .clock-main {
   position: relative;
@@ -18,35 +16,62 @@
   margin: 0 auto;
 }
 .clock-digit {
-  width: 22%;
-  height: 80%;
+  width: 50%;
+  height: 90%;
   margin: 1rem 1rem;
   padding: 1rem;
 }
+.clock-digit-section {
+  display: flex;
+  width: 48%;
+  height: 100%;
+  margin: 0 auto;
+}
 .clock-sub {
-  position: absolute;
-  bottom: -1rem;
-  left: 21rem;
+  background-color: white;
+  margin: 2rem auto;
+  border: groove 1rem black;
+}
+@media (max-width: 900px) {
+  .clock {
+    height: 100vh;
+  }
+  .clock-main {
+    flex-direction: column;
+    height: 100%;
+  }
+  .clock .separator {
+    display: none;
+  }
+  .clock-digit-section {
+    width: 100%;
+  }
+  .clock-sub {
+    width: 90%;
+    word-wrap: break-word;
+    text-align: center;
+  }
 }
 
 .separator {
   display: flex;
   flex-direction: column;
   height: 100%;
-  width: 5rem;
+  width: 10%;
+  justify-content: space-around;
 }
 .separator-circle {
-  width: 5rem;
-  height: 5rem;
+  display: inline-block;
+  width: 100%;
+  height: 25%;
   border-radius: 100%;
   background-color: black;
-  margin: 3rem -2rem;
+  margin: 3rem auto;
 }
-
 .top,
 .bottom {
-  width: 10rem;
-  height: 10rem;
+  width: 100%;
+  height: 48%;
   position: relative;
 }
 
@@ -703,8 +728,7 @@
           clip-path: polygon(20% 20%, 0 0, 0 100%, 20% 80%);
 }
 
-@media (max-width: 1200px) {
-  body {
-    font-size: 62.3%;
-  }
+body {
+  margin: 0;
+  padding: 0;
 }/*# sourceMappingURL=app.css.map */

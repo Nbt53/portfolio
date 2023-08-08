@@ -9,7 +9,7 @@
         border: dashed 1.5rem $color-primary-5;
         justify-content: center;
         padding: 4rem;
-        width: 69%;
+        width: 70%;
         margin: 0 auto;
         margin-bottom: 10rem;
 
@@ -24,7 +24,7 @@
         color: $color-grey-dark-4;
         letter-spacing: 3px;
         font-weight: 900;
-        text-align: center;
+        text-align: left;
         margin-bottom: 1rem;
         width: 45%;
 
@@ -68,6 +68,7 @@
     &__paragraph {
         width: 45%;
         column-count: 2;
+        column-rule: dashed $color-primary-5 2px;
 
         @include respond(tab-land) {
             width: unset;

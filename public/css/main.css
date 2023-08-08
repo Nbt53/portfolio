@@ -422,7 +422,7 @@ body {
   border: dashed 1.5rem #c92a2a;
   justify-content: center;
   padding: 4rem;
-  width: 69%;
+  width: 70%;
   margin: 0 auto;
   margin-bottom: 10rem;
 }
@@ -437,7 +437,7 @@ body {
   color: #343a40;
   letter-spacing: 3px;
   font-weight: 900;
-  text-align: center;
+  text-align: left;
   margin-bottom: 1rem;
   width: 45%;
 }
@@ -481,6 +481,8 @@ body {
   width: 45%;
   -moz-column-count: 2;
        column-count: 2;
+  -moz-column-rule: dashed #c92a2a 2px;
+       column-rule: dashed #c92a2a 2px;
 }
 @media (max-width: 75em) {
   .about__paragraph {
