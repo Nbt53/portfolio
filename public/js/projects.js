@@ -36,11 +36,22 @@ const clock = {
     image: "/img/clock.png",
     description: "This digital clock, created using HTML, CSS, and JS, displays the current time using clip path and absolute positioning. Each digit is made using a separate div element and styled with unique shapes for each number. The time is extracted using JavaScript's Date() object and displayed in the respective div elements using a loop to add a class for the appropriate digit."
 }
+
+const soulNotes = {
+    name: 'Soul Notes',
+    type: 'Website',
+    link: 'https://soulnotes-ht8b.onrender.com/',
+    git: "",
+    image: "/img/soulnotes.png",
+    description: "A webshop dedicated to the bespoke perfume niche. This project masterfully leverages Node.js and Express.js for the backend, ensuring seamless server-side operations. With the integration of Passport.js, user authentication is fortified, offering customers a secure login and authentication process. On the frontend, the webshop shines with its thoughtful blend of HTML, CSS (Sass), and JavaScript. Sass brings elegance to the design, maintaining visual consistency across the site. The true highlight, however, is the incorporation of Stripe for payment processing, instilling trust and simplicity into the transaction experience. In summary, my creation harmonizes the power of Node.js, Express.js, Sass, JavaScript, Passport.js, and Stripe to deliver an impeccable, secure, and visually appealing webshop. This platform invites customers to explore and purchase personalized perfumes, exemplifying my commitment to blending advanced technology with an elegant user experience."
+}
+
 const projectData = {
     loveBird: loveBird,
     crosses: crosses,
     doodle: doodle,
-    clock: clock
+    clock: clock,
+    soulNotes: soulNotes
 };
 
 projects.forEach(project => {
