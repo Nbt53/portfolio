@@ -24,3 +24,7 @@ module.exports.renderClock = (req, res) =>{
 module.exports.renderSpace = (req, res) =>{
     res.render('pages/invaders')
 }
+
+module.exports.renderDesign = (req, res) =>{
+    res.render('pages/design')
+}
