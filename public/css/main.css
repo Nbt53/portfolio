@@ -88,8 +88,7 @@ body {
 .nav__item {
   position: relative;
   height: 100%;
-  width: 9rem;
-  font-size: 1.75rem;
+  font-size: 2.5rem;
   font-weight: 300;
   list-style: none;
   text-align: center;
@@ -818,7 +817,9 @@ body {
 .design__one-title {
   font-size: 6rem;
   text-align: center;
-  width: 100vw;
+  margin: 0 auto;
+  width: 20rem;
+  transform: translateX(-75%);
 }
 .design__one-title-one {
   font-family: "Press Start 2P", cursive;
@@ -882,7 +883,12 @@ body {
   padding: 0rem;
   border-radius: 20px;
   overflow: hidden;
-  transition: width 0.8s ease, height 0.8s ease, padding 0.8s ease;
+  position: absolute;
+  top: 5rem;
+  left: 4.5rem;
+  width: 0;
+  max-height: 1000px;
+  transition: all 0.8s ease;
 }
 .design__one-contact-label {
   font-size: 2.2rem;

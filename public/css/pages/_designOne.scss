@@ -16,7 +16,9 @@ $color-purple: #6A4C93;
     &-title {
         font-size: 6rem;
         text-align: center;
-        width: 100vw;
+        margin: 0 auto;
+        width: 20rem;
+        transform: translateX(-75%);
 
         &-one {
             font-family: 'Press Start 2P', cursive;
@@ -87,7 +89,12 @@ $color-purple: #6A4C93;
             padding: 0rem;
             border-radius: 20px;
             overflow: hidden;
-            transition: width .8s ease, height .8s ease, padding .8s ease ;
+            position: absolute;
+            top: 5rem; // Adjust this value to fit your design
+            left: 4.5rem;
+            width: 0;
+            max-height: 1000px;
+            transition: all 0.8s ease; // Adjust transition properties
         }
 
         &-label {
