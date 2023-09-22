@@ -4,9 +4,10 @@
     margin-bottom: 5rem;
     padding-top: 5rem;
 
-    &-project{
+    &-project {
         display: flex;
         flex-direction: column;
+
         @include respond(tab-port) {
             flex-direction: column-reverse;
         }
@@ -37,6 +38,7 @@
         text-align: center;
         margin: 5rem 0;
         justify-content: center;
+        margin: 2rem;
 
         &-text {
             color: $color-grey-dark-3;
@@ -44,6 +46,7 @@
             font-size: 3rem;
             letter-spacing: 2px;
             font-weight: 600;
+            padding: 1rem;
         }
 
     }
