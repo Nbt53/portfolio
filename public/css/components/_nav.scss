@@ -68,7 +68,7 @@
 
     .nav__link-active {
         color: $color-grey-dark-4;
-        border-bottom: $border-bottom;
+        border-bottom: 2px dashed $color-primary-1;
     }
 
     &__hamburger {

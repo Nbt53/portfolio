@@ -148,7 +148,7 @@ body {
 }
 .nav .nav__link-active {
   color: #343a40;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 2px dashed #ffc9c9;
 }
 .nav__hamburger {
   display: none;

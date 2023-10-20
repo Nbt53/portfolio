@@ -1,25 +1,22 @@
 <nav class="nav__container">
 
-    <% const navItems=[ { name: 'Home' , url: '/' }, { name: 'About' , url: '/about' }, { name: 'Projects',url: '/projects' }, { name: 'Contact' , url: '/contact' } ] %>
+    <% const navItems=[ { name: 'Home' , url: '/' }, { name: 'About' , url: '/about' }, { name: 'Projects'
+        ,url: '/projects' }, { name: 'Contact' , url: '/contact' } ] %>
 
 
         <div class="nav">
             <img src="/img/pigeon.png" alt="" class="nav__logo">
             <ul class="nav__list">
                 <% navItems.map((item)=>{ %>
-                    <% if(currentUrl === item.url){ %>
-                        <li class="nav__item"><a href=<%= item.url %> class="nav__link nav__link-active"><%= item.name %></a></li>
+                    <% if(currentUrl===item.url){ %>
+                        <li class="nav__item"><a href=<%=item.url %> class="nav__link nav__link-active"><%= item.name %>
+                                    </a></li>
                         <% } else {%>
-                    <li class="nav__item"><a href=<%= item.url %> class="nav__link"><%= item.name %></a></li>
-                    <% } %>
-                    <% }) %>
+                            <li class="nav__item"><a href=<%=item.url %> class="nav__link"><%= item.name %></a></li>
+                            <% } %>
+                                <% }) %>
 
-                        <!-- <li class="nav__item"><a href="/" class="nav__link">Home</a></li>
-                        <li class="nav__item"><a href="/about" class="nav__link">About</a></li>
-                        <li class="nav__item"><a href="/projects" class="nav__link">Projects</a></li>
-                        <li class="nav__item"><a href="/design" class="nav__link">Design</a></li>
-                        <li class="nav__item"><a href="/contact" class="nav__link">Contact</a></li>
-                        <%= currentUrl %> -->
+
             </ul>
 
         </div>
