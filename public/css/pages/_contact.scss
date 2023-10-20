@@ -46,6 +46,7 @@
         }
 
         &-form {
+         
             width: 50%;
 
             @include respond(tab-port) {
@@ -53,6 +54,12 @@
                 width: unset;
             }
 
+        }
+
+        &-links{
+            display: inline-block;
+            margin: 2rem 0;
+            text-transform: capitalize;
         }
     }
 

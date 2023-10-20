@@ -30,8 +30,8 @@ app.use(
     directives: {
       defaultSrc: [],
       connectSrc: ["'self'", ...whiteList],
-      scriptSrc: ["'self'", ...whiteList],
-      styleSrc: ["'self'", ...whiteList],
+      scriptSrc: ["'self'", ...whiteList, "'unsafe-inline'"],
+      styleSrc: ["'self'", ...whiteList, , "'unsafe-inline'"],
       workerSrc: ["'self'", "blob:"],
       objectSrc: [],
       imgSrc: [
@@ -74,8 +74,16 @@ app.set('views', path.join(__dirname, 'views'));
 //to use css and js
 app.use(express.static(__dirname + '/public'));
 
+///middlewear//
+
+app.use((req, res, next) => {
+  res.locals.currentUrl = req.originalUrl
+  next(); 
+});
+
 //import routes
 const routes = require('./routes/routes');
+
 
 app.use('/', routes)
 

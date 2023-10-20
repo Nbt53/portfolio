@@ -1,29 +1,46 @@
-@keyframes alienWalkLeft {
+
+
+@keyframes typing {
     0% {
-        transform: translateY(-3px);
+        width: 0;
     }
 
-    50%{
-        transform: translateY(0);
-    }
     100% {
+        width: 100%; // Expand width to show full text
 
-        transform: translateY(-3px);
     }
-
 }
 
-@keyframes alienWalkRight {
-    0% {
-        transform: translateY(0);
-    }
+@keyframes cursor-blink {
 
-    50%{
-        transform: translateY(-3px);
-    }
+    0%,
     100% {
-
-        transform: translateY(0);
+        border-right: 1px solid black;
     }
 
+    50% {
+        border-right: none;
+    }
 }
+
+
+@keyframes typing-fill {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: auto; // Set width to 'auto' once fully typed
+    }
+}
+
+
+@keyframes cursor-hide {
+    0% {
+        border-right: 2px solid black; // Start hiding immediately
+      }
+    
+      100% {
+        border-right: none; // Hide cursor
+      }
+  }
