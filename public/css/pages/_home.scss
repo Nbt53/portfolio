@@ -8,7 +8,6 @@
 
     @include respond(tab-port) {
         flex-direction: column;
-
     }
 
     @include respond(phone) {
@@ -16,11 +15,29 @@
     }
 }
 
+.title {
+
+    &__links {
+        display: flex;
+        
+
+        @include respond(phone) {
+            justify-content: center;
+        }
+
+        &-link {
+            font-size: 3rem;
+            color: black;
+            margin: 1rem;
+        }
+    }
+}
+
 .img-build {
     height: 25rem;
     border-radius: 37% 63% 94% 6% / 54% 53% 47% 46%;
     margin: 0 auto;
- 
+
 
     @include respond(phone) {
         width: 37rem;
@@ -73,5 +90,31 @@
                 text-align: right;
             }
         }
+    }
+}
+
+.technologies {
+    width: 100%;
+
+
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 70%;
+        margin: 0 auto;
+    }
+
+
+    &__item {
+        margin-top: 4rem;
+        margin-left: 4rem;
+        text-align: center;
+        font-size: 1.4rem;
+    }
+
+    svg {
+        width: 10rem;
+        margin-bottom: 1rem;
     }
 }

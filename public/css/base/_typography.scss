@@ -4,6 +4,8 @@
 
   &__container {
     width: 80%;
+    display: flex;
+    flex-direction: column;
   }
 
   &__main {
@@ -22,14 +24,25 @@
   &__sub {
     font-size: 7rem;
     font-weight: 300;
-    text-align: end;
-    align-self: end;
     letter-spacing: -2px;
     color: $color-grey-dark-3;
 
+    @include respond(smallPhone) {
+      font-size: 4.5rem;
+
+    }
   }
 
-  @include respond(smallPhone) {
-    font-size: 4.5rem;
+  &__description {
+    font-size: 1.6rem;
+    color: $color-grey-dark-2;
+    font-weight: 200;
+    margin-top: 1rem;
+
+    @include respond(smallPhone) {
+      text-align: center;
+
+    }
   }
+
 }

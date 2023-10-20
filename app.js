@@ -7,6 +7,7 @@ const path = require('path');
 const methodOverride = require('method-override');
 const helmet = require("helmet");
 const { styleSrcUrls, whiteList } = require('./whiteList');
+const { icons } = require('./public/js/techIcons');
 
 //variables for set up
 const secret = '4684a58s4d78f54g1h2ddd58h'
@@ -85,10 +86,11 @@ app.use((req, res, next) => {
 const routes = require('./routes/routes');
 
 
+
 app.use('/', routes)
 
 app.get('/', (req, res) => {
-  res.render('home')
+  res.render('home', {icons})
 })
 
 

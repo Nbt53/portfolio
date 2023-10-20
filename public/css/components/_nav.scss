@@ -1,7 +1,7 @@
 .nav {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-between;
+    justify-content: center;
     transition: all 0.8s ease-in;
 
     &__container {
@@ -50,7 +50,8 @@
 
     .nav__link-active {
         color: $color-grey-dark-4;
-        border-bottom: 2px dashed $color-primary-1;
+        padding-bottom: 0.5rem;
+        border-bottom: 5px dashed $color-grey-dark-1;
     }
 
     &__hamburger {

@@ -4,12 +4,33 @@
             <h1 class="title__main"> <span class="title__main-first">Nicholas</span>
                 <span class="title__main-second">hargreaves</span>
             </h1>
+            <h2 class="title__sub"> Full stack developer</h2>
+            <h3 class="title__description"> "I engineer cutting-edge web experiences and shape unique mobile solutions."
+            </h3>
+
+            <div class=" title__links">
+                <a class="title__links-link " href="mailto:nhargreaves53@gmail.com"><ion-icon name="mail"></ion-icon></a>
+
+                <a class="title__links-link " href="https://github.com/Nbt53" target="_blank"> <ion-icon
+                        name="logo-github"></ion-icon></a>
+            </div>
         </div>
 
-        <img src="/img/lego.jpg" alt="building blocks" class="img-build">
+        <!-- <img src="/img/lego.jpg" alt="building blocks" class="img-build"> -->
 
-        <h2 class="title__sub"> Full stack developer</h2>
+    </section>
+    <section class="technologies">
+        <div class="technologies__container">
+            <% icons.map((icon)=> { %>
+                <div class="technologies__item">
+                    <%- icon.SVG %>
+                        <h3>
+                            <%= icon.name %>
+                        </h3>
+                </div>
 
+                <% }) %>
+        </div>
     </section>
 
     <section class="bio">
