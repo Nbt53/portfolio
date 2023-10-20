@@ -2,8 +2,12 @@
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    //  border-bottom: $border-bottom;
     transition: all 0.8s ease-in;
+
+    &__container {
+        margin-top: 2rem;
+        padding-left: 2rem;
+    }
 
     &__logo {
         height: 0rem;
@@ -17,9 +21,9 @@
     &__item {
         position: relative;
         height: 100%;
-        //  width: 9rem;
         font-size: 1.4rem;
         font-weight: 400;
+        letter-spacing: 2px;
         list-style: none;
         text-align: center;
         margin: 0 2rem;
@@ -29,36 +33,14 @@
             margin: 0;
         }
 
-        &::before {
-            content: "";
-            background-color: $color-primary-2;
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 0;
-            clip-path: polygon(0 0, 62% 0, 100% 100%, 0% 100%);
-            transition: all 1s cubic-bezier(.91, .01, .24, .81);
-
-        }
-
-        &:hover::before {
-
-            content: "";
-            position: absolute;
-            width: 100%;
-            clip-path: polygon(0 0, 80% 0, 100% 100%, 0% 100%);
-        }
     }
 
     &__link:link,
     &__link:visited {
-
         position: relative;
         text-decoration: none;
         color: $color-grey-dark-1;
         display: block;
-        padding: 1.5rem;
         transition: all .5s .5s;
 
         &:hover {
@@ -92,6 +74,9 @@
             height: 10rem;
             width: 100%;
             z-index: 1000;
+            padding: 0;
+            margin-top: 0;
+            
         }
 
         &__logo {
@@ -101,19 +86,26 @@
 
         &__list {
             display: flex;
+            width: 100%;
             flex-direction: column;
+            padding-top: 5rem;
         }
 
         &__item {
+            display: flex;
             width: 100%;
-            font-size: 4rem;
+            font-size: 2.4rem;
             margin: 2rem;
+            justify-content: center;
         }
 
         &__link {
             position: absolute;
             z-index: 100000;
             color: $color-grey-dark-5;
+            padding-bottom: 1rem;
+            width: 50%;
+
         }
 
         &__hamburger {
