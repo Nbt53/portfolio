@@ -19,7 +19,7 @@
 
     &__links {
         display: flex;
-        
+
 
         @include respond(phone) {
             justify-content: center;
@@ -103,6 +103,10 @@
         justify-content: space-around;
         width: 70%;
         margin: 0 auto;
+
+        @include respond(phone) {
+            width: 100%;
+        }
     }
 
 
@@ -111,10 +115,20 @@
         margin-left: 4rem;
         text-align: center;
         font-size: 1.4rem;
+
+        @include respond(phone) {
+            margin: 1.3rem;
+            font-size: 1rem;
+            width: 8rem;
+        }
     }
 
     svg {
         width: 10rem;
         margin-bottom: 1rem;
+
+        @include respond(phone) {
+            width: 6rem;
+        }
     }
 }
