@@ -513,6 +513,7 @@ body {
   .about__item {
     width: 90%;
     display: block;
+    padding: 2rem 2rem;
   }
 }
 .about__title {
@@ -567,6 +568,12 @@ body {
 .about__paragraphs {
   text-align: right;
   width: 80%;
+}
+@media (max-width: 37.5em) {
+  .about__paragraphs {
+    width: 100%;
+    text-align: center;
+  }
 }
 .about__paragraph {
   font-family: "Dosis", sans-serif;

@@ -17,6 +17,7 @@
         @include respond(tab-land) {
             width: 90%;
             display: block;
+            padding: 2rem 2rem;
         }
     }
 
@@ -73,12 +74,17 @@
     &__paragraphs {
         text-align: right;
         width: 80%;
+
+        @include respond(phone) {
+            width: 100%;
+            text-align: center;
+        }
     }
 
     &__paragraph {
         font-family: 'Dosis', sans-serif;
         font-weight: 600;
-       
+
 
         @include respond(tab-land) {
             width: unset;
