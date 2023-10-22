@@ -122,7 +122,8 @@
             border-radius: 100%;
             top: 2rem;
             right: 2rem;
-            background-color: $color-grey-light-2;
+            // background-color: $color-grey-light-2;
+            border: 1px dashed rgba($color-grey-dark-1, 0.5);
 
             &-container {
                 display: none;

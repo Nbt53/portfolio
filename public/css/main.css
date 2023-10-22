@@ -208,7 +208,7 @@ body {
     border-radius: 100%;
     top: 2rem;
     right: 2rem;
-    background-color: #f1f3f5;
+    border: 1px dashed rgba(173, 181, 189, 0.5);
   }
   .nav__hamburger-container {
     display: none;
