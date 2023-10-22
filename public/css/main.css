@@ -70,6 +70,7 @@ body {
   letter-spacing: 1px;
   color: #343a40;
   margin-right: 1.5rem;
+  width: 80%;
 }
 @media (max-width: 37.5em) {
   .title__main {
@@ -82,9 +83,9 @@ body {
   letter-spacing: -2px;
   color: #495057;
 }
-@media (max-width: 31.25em) {
+@media (max-width: 37.5em) {
   .title__sub {
-    font-size: 4.5rem;
+    font-size: 4rem;
   }
 }
 .title__description {
@@ -395,6 +396,9 @@ body {
   font-size: 3rem;
   color: black;
   margin: 1rem;
+}
+.title__container {
+  width: 100%;
 }
 
 .img-build {
