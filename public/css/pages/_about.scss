@@ -1,12 +1,13 @@
 .about {
     padding: 3rem;
+
     @include respond(tab-land) {
-       padding: 3rem 0rem;
+        padding: 3rem 0rem;
     }
 
     &__item {
         display: flex;
-        border: dashed 1.5rem $color-primary-5;
+        border: dashed 1.5rem $color-grey-dark-3;
         justify-content: center;
         padding: 4rem;
         width: 70%;
@@ -52,6 +53,10 @@
         border-radius: 20px;
         border-bottom: unset;
 
+        h2 {
+            text-transform: uppercase;
+            font-weight: 800;
+        }
 
         @include respond(tab-land) {
             font-size: 2.3rem;
@@ -65,10 +70,15 @@
         }
     }
 
+    &__paragraphs {
+        text-align: right;
+        width: 80%;
+    }
+
     &__paragraph {
-        width: 45%;
-        column-count: 2;
-        column-rule: dashed $color-primary-5 2px;
+        font-family: 'Dosis', sans-serif;
+        font-weight: 600;
+       
 
         @include respond(tab-land) {
             width: unset;
