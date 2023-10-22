@@ -23,7 +23,7 @@
 
 
         @include respond(phone) {
-            justify-content: center;
+            justify-content: start;
         }
 
         &-link {

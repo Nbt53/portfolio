@@ -389,7 +389,7 @@ body {
 }
 @media (max-width: 37.5em) {
   .title__links {
-    justify-content: center;
+    justify-content: start;
   }
 }
 .title__links-link {
