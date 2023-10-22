@@ -12,6 +12,7 @@
 
     @include respond(phone) {
         padding: 2rem;
+        margin-top: 0rem;
     }
 }
 
