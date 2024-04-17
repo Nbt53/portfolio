@@ -15,7 +15,11 @@ html {
 }
 
 body {
+    position: absolute;
     box-sizing: border-box;
     background-image: linear-gradient(to right bottom, $color-grey-light-1 20%, $color-grey-light-2);
-    min-height: 100vh;
+    height: 100vh;
+    overflow: auto;
+
+    @include respond(tab-land) {}
 }

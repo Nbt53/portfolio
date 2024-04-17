@@ -1,3 +1,93 @@
-.emphasis{
+@use "sass:math";
+
+////////font utils//////
+.f-uc {
+    text-transform: uppercase;
+}
+
+//////// position utils//////
+
+@for $i from 1 through 1000 {
+    .z-#{$i} {
+        z-index: $i;
+    }
+}
+
+p-r {
+    position: relative;
+}
+
+p-a {
+    position: absolute;
+}
+
+
+
+//////// size utils//////
+
+@for $i from 1 through 100 {
+    .h-#{$i} {
+        height: percentage(math.div($i, 100));
+    }
+
+    .w-#{$i} {
+        width: percentage(math.div($i, 100));
+    }
+}
+
+//////// margin utils//////
+
+@for $i from 1 through 100 {
+    .m-#{$i} {
+        margin: percentage(math.div($i, 100));
+    }
+
+    .mt-#{$i} {
+        margin-top: percentage(math.div($i, 100));
+    }
+
+    .mr-#{$i} {
+        margin-right: percentage(math.div($i, 100));
+    }
+
+    .mb-#{$i} {
+        margin-bottom: percentage(math.div($i, 100));
+    }
+
+    .ml-#{$i} {
+        margin-left: percentage(math.div($i, 100));
+    }
+}
+
+//////// padding utils//////
+
+@for $i from 1 through 100 {
+    .p-#{$i} {
+        padding: percentage(math.div($i, 100));
+    }
+
+    .pt-#{$i} {
+        padding-top: percentage(math.div($i, 100));
+    }
+
+    .pr-#{$i} {
+        padding-right: percentage(math.div($i, 100));
+    }
+
+    .pb-#{$i} {
+        padding-bottom: percentage(math.div($i, 100));
+    }
+
+    .pl-#{$i} {
+        padding-left: percentage(math.div($i, 100));
+    }
+}
+
+.emphasis {
     font-weight: 500;
+}
+
+.fs {
+    width: 100%;
+    height: 100%;
 }

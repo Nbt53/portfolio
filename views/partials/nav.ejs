@@ -1,4 +1,4 @@
-<nav class="nav__container">
+<nav class="nav__container z-1000">
 
     <% const navItems=[ { name: 'Home' , url: '/' }, { name: 'About' , url: '/about' }, { name: 'Projects'
         ,url: '/projects' }, { name: 'Contact' , url: '/contact' } ] %>
@@ -10,15 +10,19 @@
                 <% navItems.map((item)=>{ %>
                     <% if(currentUrl===item.url){ %>
                         <li class="nav__item"><a href=<%=item.url %> class="nav__link nav__link-active"><%= item.name %>
-                                    </a></li>
+                            </a></li>
                         <% } else {%>
                             <li class="nav__item"><a href=<%=item.url %> class="nav__link"><%= item.name %></a></li>
                             <% } %>
                                 <% }) %>
 
-
             </ul>
+        </div>
+        <div class=" nav__links">
+            <a class="nav__links-link " href="mailto:nhargreaves53@gmail.com"><ion-icon name="mail"></ion-icon></a>
 
+            <a class="nav__links-link " href="https://github.com/Nbt53" target="_blank"> <ion-icon
+                    name="logo-github"></ion-icon></a>
         </div>
 
         <div class="nav__hamburger">

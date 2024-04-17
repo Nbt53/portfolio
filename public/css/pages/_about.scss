@@ -1,5 +1,8 @@
 .about {
     padding: 3rem;
+    // perspective: 10px;
+    // height: 100vh;
+    // overflow-y: auto;
 
     @include respond(tab-land) {
         padding: 3rem 0rem;
@@ -10,7 +13,7 @@
         border: dashed 1.5rem $color-grey-dark-3;
         justify-content: center;
         padding: 4rem;
-        width: 70%;
+        width: 100%;
         margin: 0 auto;
         margin-bottom: 10rem;
 
@@ -41,6 +44,10 @@
             color: $color-grey-dark-5;
             letter-spacing: 5px;
             font-weight: 900;
+            // transform: translateZ(-5px) scale(1.5);
+
+
+            @include respond(phone) {}
         }
     }
 
@@ -77,7 +84,7 @@
 
     &__paragraphs {
         text-align: right;
-        width: 80%;
+        width: 100%;
 
         @include respond(phone) {
             width: 100%;
@@ -101,14 +108,22 @@
     }
 
     &__img {
+        // position: relative;
         display: block;
-        width: 60rem;
+        width: 40rem;
+   
         border-radius: 3px;
-        margin: 5rem auto;
+        margin: 0 auto;
+        border: dashed 1rem $color-grey-dark-3;
+        // transform: translateZ(-10px) scale(2);
+        // z-index: -100;
+
+   
 
         @include respond(tab-land) {
             margin-bottom: 2rem;
             width: 100%;
+            border: unset;
         }
 
         @include respond(phone) {
