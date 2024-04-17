@@ -1,8 +1,5 @@
 .about {
     padding: 3rem;
-    // perspective: 10px;
-    // height: 100vh;
-    // overflow-y: auto;
 
     @include respond(tab-land) {
         padding: 3rem 0rem;
@@ -111,14 +108,14 @@
         // position: relative;
         display: block;
         width: 40rem;
-   
+
         border-radius: 3px;
         margin: 0 auto;
         border: dashed 1rem $color-grey-dark-3;
         // transform: translateZ(-10px) scale(2);
         // z-index: -100;
 
-   
+
 
         @include respond(tab-land) {
             margin-bottom: 2rem;
