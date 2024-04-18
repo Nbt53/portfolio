@@ -35,6 +35,22 @@ p-a {
     }
 }
 
+@for $i from 1 through 100 {
+    .vh-#{$i} {
+        height: #{$i}vh;
+    }
+
+    .vw-#{$i} {
+        width: #{$i}vw;
+    }
+}
+
+.fs {
+    width: 100%;
+    height: 100%;
+}
+
+
 //////// margin utils//////
 
 @for $i from 1 through 100 {
@@ -85,9 +101,4 @@ p-a {
 
 .emphasis {
     font-weight: 500;
-}
-
-.fs {
-    width: 100%;
-    height: 100%;
 }
