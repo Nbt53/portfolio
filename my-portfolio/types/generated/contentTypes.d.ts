@@ -380,7 +380,7 @@ export interface ApiPortfolioItemPortfolioItem extends Schema.CollectionType {
     description: Attribute.Blocks;
     imageMain: Attribute.Media;
     images: Attribute.Media;
-    data: Attribute.Date;
+    date: Attribute.Date;
     slug: Attribute.String &
       Attribute.SetMinMaxLength<{
         minLength: 3;
