@@ -8,6 +8,7 @@ const methodOverride = require('method-override');
 const helmet = require("helmet");
 const { styleSrcUrls, whiteList } = require('./whiteList');
 const { icons } = require('./public/js/techIcons');
+require('dotenv').config();
 
 //variables for set up
 const secret = '4684a58s4d78f54g1h2ddd58h'
@@ -79,7 +80,7 @@ app.use(express.static(__dirname + '/public'));
 
 app.use((req, res, next) => {
   res.locals.currentUrl = req.originalUrl
-  next(); 
+  next();
 });
 
 //import routes
@@ -89,8 +90,41 @@ const routes = require('./routes/routes');
 
 app.use('/', routes)
 
+const http = require('http');
+
+app.get('/test', function (req, res) {
+  const options = {
+    hostname: 'localhost',
+    port: 1337,
+    path: '/api/portfolio-items',
+    method: 'GET',
+    headers: {
+      'Authorization': `bearer ${process.env.STRAPI_API}`
+    }
+  };
+
+  const request = http.request(options, (response) => {
+    let data = '';
+
+    response.on('data', (chunk) => {
+      data += chunk;
+    });
+
+    response.on('end', () => {
+      const parsedData = JSON.parse(data);
+      res.render('test', { data: parsedData });
+    });
+  });
+
+  request.on('error', (error) => {
+    console.error(`Problem with request: ${error.message}`);
+  });
+
+  request.end();
+});
+
 app.get('/', (req, res) => {
-  res.render('home', {icons})
+  res.render('home', { icons })
 })
 
 
