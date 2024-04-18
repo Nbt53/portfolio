@@ -10074,6 +10074,11 @@ p {
     flex-direction: column-reverse;
   }
 }
+@media (max-width: 37.5em) {
+  .about__header-text {
+    margin-left: 1.8rem;
+  }
+}
 .about__img {
   display: block;
   width: 100%;
@@ -10125,6 +10130,18 @@ p {
     width: 90%;
     display: block;
     padding: 2rem 2rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .about__item {
+    padding: unset;
+    border: unset;
+  }
+}
+@media (max-width: 37.5em) {
+  .about__title {
+    line-height: unset;
+    margin-bottom: 1.8rem;
   }
 }
 .about__paragraphs {

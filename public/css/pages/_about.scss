@@ -13,6 +13,13 @@
             height: 50vh;
             flex-direction: column-reverse;
         }
+
+        &-text {
+            @include respond(phone) {
+                margin-left: 1.8rem;
+
+            }
+        }
     }
 
     &__img {
@@ -70,9 +77,21 @@
             display: block;
             padding: 2rem 2rem;
         }
+
+        @include respond(phone) {
+            padding: unset;
+            border: unset;
+
+        }
     }
 
+    &__title {
+        @include respond(phone) {
+            line-height: unset;
+            margin-bottom: 1.8rem;
 
+        }
+    }
 
     &__paragraphs {
         text-align: right;
