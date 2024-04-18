@@ -19,7 +19,7 @@ html {
 body {
   position: absolute;
   box-sizing: border-box;
-  background-image: linear-gradient(to right bottom, #f8f9fa 20%, #f1f3f5);
+  background-color: #f8f9fa;
   height: 100vh;
   overflow: auto;
 }
@@ -9712,7 +9712,7 @@ p {
 .nav__links {
   display: flex;
 }
-@media (max-width: 37.5em) {
+@media (max-width: 75em) {
   .nav__links {
     display: none;
   }
@@ -10209,23 +10209,14 @@ p {
 .contact {
   display: flex;
   flex-direction: column;
-  margin: 2rem 5rem;
-  border: 1px red solid;
-  border-radius: 50px;
-  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
-  padding: 2rem;
-}
-@media (max-width: 37.5em) {
-  .contact {
-    padding: 1rem;
-    padding-bottom: 5rem;
-  }
+  height: 100%;
+  width: 100%;
 }
 .contact__body {
   display: flex;
   justify-content: space-around;
-  height: 80%;
   font-size: 2.4rem;
+  margin-top: 10%;
 }
 @media (max-width: 56.25em) {
   .contact__body {
@@ -10249,15 +10240,6 @@ p {
 }
 @media (max-width: 56.25em) {
   .contact__body-text {
-    width: unset;
-  }
-}
-.contact__body-form {
-  width: 50%;
-}
-@media (max-width: 56.25em) {
-  .contact__body-form {
-    margin: -6rem;
     width: unset;
   }
 }

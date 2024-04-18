@@ -1,24 +1,17 @@
 .contact {
     display: flex;
     flex-direction: column;
-    margin: 2rem 5rem;
-    border: 1px red solid;
-    border-radius: 50px;
-    box-shadow: $shadow-1;
-    padding: 2rem;
+    height: 100%;
+    width: 100%;
 
-    @include respond(phone) {
-        padding: 1rem;
-        padding-bottom: 5rem;
-    }
+    @include respond(phone) {}
 
 
     &__body {
         display: flex;
         justify-content: space-around;
-        height: 80%;
         font-size: 2.4rem;
-        
+        margin-top: 10%;
 
         @include respond(tab-port) {
             flex-direction: column;
@@ -26,8 +19,8 @@
         }
 
         @include respond(smallPhone) {
-            font-size: 1.2rem ;
-         }
+            font-size: 1.2rem;
+        }
 
         &-text {
             letter-spacing: 0.2px;
@@ -45,18 +38,7 @@
 
         }
 
-        &-form {
-         
-            width: 50%;
-
-            @include respond(tab-port) {
-                margin: -6rem;
-                width: unset;
-            }
-
-        }
-
-        &-links{
+        &-links {
             display: inline-block;
             margin: 2rem 0;
             text-transform: capitalize;

@@ -21,7 +21,7 @@
         display: flex;
 
 
-        @include respond(phone) {
+        @include respond(tab-land) {
           display: none;
         }
 
