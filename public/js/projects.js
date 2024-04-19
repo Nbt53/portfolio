@@ -1,6 +1,16 @@
 const projects = document.querySelectorAll('.project-item')
 const projectContainer = document.querySelector('.project-container')
 
+const ObjectPetitA = {
+    name: 'Objet Petit A',
+    type: 'Website',
+    link: 'https://object-petita.onrender.com/',
+    git: "https://github.com/Nbt53/objectPetit",
+    image: "/img/object.png",
+    description: "A website for a local artist to showcase her art and interviews, it was built on a node/express backend with a react front end "
+
+}
+
 const loveBird = {
     name: 'Love bird',
     type: 'Website',
@@ -47,6 +57,7 @@ const soulNotes = {
 }
 
 const projectData = {
+    ObjectPetitA: ObjectPetitA,
     loveBird: loveBird,
     crosses: crosses,
     doodle: doodle,

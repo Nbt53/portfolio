@@ -10162,16 +10162,22 @@ p {
   display: flex;
   flex-direction: column;
   margin-bottom: 5rem;
-  padding-top: 5rem;
+  padding: 10rem 5rem 0 5rem;
 }
-.project-project {
-  display: flex;
-  flex-direction: column;
+.project-header {
+  height: 100vh;
+  position: fixed;
 }
-@media (max-width: 56.25em) {
-  .project-project {
-    flex-direction: column-reverse;
+@media (max-width: 37.5em) {
+  .project {
+    margin: unset;
   }
+}
+.project-container {
+  min-height: 100vh;
+  z-index: 50;
+  margin-top: 100vh;
+  background-color: #f8f9fa;
 }
 .project-title {
   color: #495057;

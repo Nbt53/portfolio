@@ -2,15 +2,22 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 5rem;
-    padding-top: 5rem;
+    padding: 10rem 5rem 0 5rem;
 
-    &-project {
-        display: flex;
-        flex-direction: column;
+    &-header {
+        height: 100vh;
+        position: fixed;
+    }
 
-        @include respond(tab-port) {
-            flex-direction: column-reverse;
-        }
+    @include respond(phone) {
+        margin: unset;
+    }
+
+    &-container {
+        min-height: 100vh;
+        z-index: 50;
+        margin-top: 100vh;
+        background-color: $color-grey-light-1 ;
     }
 
     &-title {
