@@ -4,13 +4,14 @@
     margin-bottom: 5rem;
     padding: 10rem 5rem 0 5rem;
 
+    @include respond(phone) {
+        margin: unset;
+        padding: 1rem;
+    }
+
     &-header {
         height: 100vh;
         position: fixed;
-    }
-
-    @include respond(phone) {
-        margin: unset;
     }
 
     &-container {
@@ -46,6 +47,12 @@
         margin: 5rem 0;
         justify-content: center;
         margin: 2rem;
+
+        @include respond(phone) {
+            margin: 1rem unset;
+
+            width: 100%;
+        }
 
         &-text {
             color: $color-grey-dark-3;

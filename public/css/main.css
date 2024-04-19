@@ -21,6 +21,7 @@ body {
   box-sizing: border-box;
   background-color: #f8f9fa;
   height: 100vh;
+  width: 100%;
   overflow: auto;
 }
 .f-uc {
@@ -9860,6 +9861,11 @@ p {
   margin: 5rem;
   color: #495057;
 }
+@media (max-width: 37.5em) {
+  .card {
+    margin: 1rem;
+  }
+}
 .card__header {
   display: flex;
   justify-content: center;
@@ -9984,6 +9990,7 @@ p {
   margin-top: 5rem;
   position: fixed;
   top: 0;
+  left: 0;
 }
 @media (max-width: 56.25em) {
   .main {
@@ -10005,6 +10012,7 @@ p {
 }
 
 .img-build {
+  display: none;
   height: 25rem;
   border-radius: 37% 63% 94% 6%/54% 53% 47% 46%;
   margin: 0 auto;
@@ -10018,6 +10026,9 @@ p {
 
 .technologies {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin-top: 100vh;
   width: 100%;
   background-image: linear-gradient(to right bottom, #f8f9fa 20%, #f1f3f5);
@@ -10164,14 +10175,15 @@ p {
   margin-bottom: 5rem;
   padding: 10rem 5rem 0 5rem;
 }
-.project-header {
-  height: 100vh;
-  position: fixed;
-}
 @media (max-width: 37.5em) {
   .project {
     margin: unset;
+    padding: 1rem;
   }
+}
+.project-header {
+  height: 100vh;
+  position: fixed;
 }
 .project-container {
   min-height: 100vh;
@@ -10202,6 +10214,12 @@ p {
   margin: 5rem 0;
   justify-content: center;
   margin: 2rem;
+}
+@media (max-width: 37.5em) {
+  .project-item {
+    margin: 1rem unset;
+    width: 100%;
+  }
 }
 .project-item-text {
   color: #495057;

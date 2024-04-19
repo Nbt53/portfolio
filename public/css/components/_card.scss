@@ -8,6 +8,10 @@
     margin: 5rem;
     color: $color-grey-dark-3;
 
+    @include respond(phone) {
+        margin: 1rem;
+    }
+
     &__header {
         display: flex;
         justify-content: center;
