@@ -19,7 +19,7 @@ html {
 body {
   position: absolute;
   box-sizing: border-box;
-  background-color: #f8f9fa;
+  background-color: #f1f3f5;
   height: 100vh;
   width: 100%;
   overflow: auto;
@@ -10000,10 +10000,41 @@ a {
   height: 100%;
 }
 
+.scroll {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.scroll__text {
+  margin: unset;
+  margin: 0 5rem;
+}
+.scroll__icon {
+  font-size: 2rem;
+  color: #adb5bd;
+}
+@media (max-width: 37.5em) {
+  .scroll__icon {
+    font-size: 4rem;
+  }
+}
+.scroll__projects {
+  top: 15%;
+  transform: translateX(-43%);
+}
+@media (max-width: 37.5em) {
+  .scroll__projects {
+    display: none;
+  }
+}
+
 .main {
   display: flex;
   justify-content: center;
-  padding: 15% 15% 0 15%;
+  padding: 10% 15% 0 15%;
   margin-top: 5rem;
   position: fixed;
   top: 0;
@@ -10012,16 +10043,8 @@ a {
 @media (max-width: 56.25em) {
   .main {
     flex-direction: column;
-    justify-content: unset;
   }
 }
-@media (max-width: 37.5em) {
-  .main {
-    padding: 2rem;
-    margin-top: 0rem;
-  }
-}
-
 .title__container {
   width: 100%;
   display: flex;
@@ -10059,7 +10082,8 @@ a {
   justify-content: center;
   margin-top: 100vh;
   width: 100%;
-  background-image: linear-gradient(to right bottom, #f8f9fa 20%, #f1f3f5);
+  background-color: #f1f3f5;
+  box-shadow: 1px 1px 11px rgba(52, 58, 64, 0.6);
 }
 .technologies__container {
   display: flex;
@@ -10200,8 +10224,12 @@ a {
 .project {
   display: flex;
   flex-direction: column;
+  position: fixed;
+  top: 0;
   margin-bottom: 5rem;
   padding: 10rem 5rem 0 5rem;
+  height: 100%;
+  width: 100%;
 }
 @media (max-width: 37.5em) {
   .project {
@@ -10214,7 +10242,7 @@ a {
   position: fixed;
 }
 .project-container {
-  min-height: 100vh;
+  position: relative;
   z-index: 50;
   margin-top: 100vh;
   background-color: #f8f9fa;

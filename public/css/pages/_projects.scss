@@ -1,8 +1,12 @@
 .project {
     display: flex;
     flex-direction: column;
+    position: fixed;
+    top: 0;
     margin-bottom: 5rem;
     padding: 10rem 5rem 0 5rem;
+    height: 100%;
+    width: 100%;
 
     @include respond(phone) {
         margin: unset;
@@ -15,7 +19,8 @@
     }
 
     &-container {
-        min-height: 100vh;
+        position: relative;
+
         z-index: 50;
         margin-top: 100vh;
         background-color: $color-grey-light-1 ;

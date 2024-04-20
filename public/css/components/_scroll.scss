@@ -1,0 +1,29 @@
+.scroll {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &__text {
+        margin: unset;
+        margin: 0 5rem
+    }
+
+    &__icon {
+        font-size: 2rem;
+        color: $color-grey-dark-1;
+        @include respond(phone) {
+            font-size: 4rem;
+        }
+    }
+
+    &__projects{
+        top: 15%;
+        transform: translateX(-43%);
+        @include respond(phone) {
+           display: none;
+        }
+    }
+}
