@@ -10,6 +10,7 @@
     @include respond(tab-port) {
         flex-direction: column;
         padding: 10% 5% 0 5%;
+        margin: unset;
     }
 
     @include respond(phone) {
@@ -26,15 +27,13 @@
 }
 
 .img-build {
-
     height: 25rem;
     border-radius: 37% 63% 94% 6% / 54% 53% 47% 46%;
     margin: 0 auto;
 
-
-    @include respond(phone) {
-       
-        width: 37rem;
+    @include respond(phone) {       
+        width: 100%;
+        height: unset;
         margin-top: 5rem;
     }
 }
