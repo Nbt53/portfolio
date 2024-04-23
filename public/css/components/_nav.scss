@@ -22,7 +22,7 @@
 
 
         @include respond(tab-land) {
-          display: none;
+            display: none;
         }
 
         &-link {
@@ -88,8 +88,9 @@
         top: 0;
         left: -70%;
         flex-direction: column;
-        background-color: rgba($color-grey-light-3, 0.95);
+        background-color: rgba($color-background, 0.95);
         justify-content: unset;
+        box-shadow: $shadow-1;
 
         &__container {
             position: sticky;

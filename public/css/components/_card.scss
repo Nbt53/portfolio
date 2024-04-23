@@ -2,32 +2,27 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 3rem 0;
-    border: 8px $color-grey-dark-1 dashed;
-    border-radius: 10px;
-    margin: 5rem;
     color: $color-grey-dark-3;
-
-    @include respond(phone) {
-        margin: 1rem;
-    }
+    box-shadow: $shadow-1;
+    width: 100%;
+    min-height: 100vh;
 
     &__header {
         display: flex;
         justify-content: center;
         padding: 2rem;
+
+        @include respond(phone) {
+            padding: unset;
+        }
     }
 
     &__img {
-        width: 80%;
-        border-radius: 10px;
-        box-shadow: $shadow-normal;
-        transition: all .2s;
+        width: 70%;
 
-        &:hover {
-            transform: scale(1.05) translateY(1rem);
-            box-shadow: $shadow-blurred;
-
+        @include respond(phone) {
+            margin-top: 2rem;
+            width: 100%;
         }
     }
 

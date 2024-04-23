@@ -20,10 +20,10 @@
 
     &-container {
         position: relative;
-
         z-index: 50;
         margin-top: 100vh;
-        background-color: $color-grey-light-1 ;
+        background-color: $color-background ;
+        min-height: 100vh;
     }
 
     &-title {
@@ -38,6 +38,13 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
+
+        @include respond(phone) {
+            height: 100%;
+            flex-direction: column;
+            flex-wrap: unset;
+
+        }
     }
 
     &-item {
@@ -45,18 +52,15 @@
         flex-direction: column;
         width: 47rem;
         height: 12rem;
-        border: 1rem $color-grey-dark-1 dashed;
         cursor: pointer;
-        margin: 2rem;
         text-align: center;
-        margin: 5rem 0;
         justify-content: center;
         margin: 2rem;
 
-        @include respond(phone) {
-            margin: 1rem unset;
-
+        @include respond(phone) {        
+            margin: unset;
             width: 100%;
+            height: 2rem;
         }
 
         &-text {

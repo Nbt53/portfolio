@@ -9,7 +9,7 @@
 
     @include respond(tab-port) {
         flex-direction: column;
-      
+        padding: 10% 5% 0 5%;
     }
 
     @include respond(phone) {
@@ -58,7 +58,7 @@
     justify-content: center;
     margin-top: 100vh;
     width: 100%;
-    background-color:  $color-grey-light-2;
+    background-color:  $color-background;
     box-shadow: $shadow-1
     ;
 
