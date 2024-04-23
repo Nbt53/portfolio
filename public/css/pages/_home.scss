@@ -33,9 +33,9 @@
 
 
     @include respond(phone) {
-        display: none;
+       
         width: 37rem;
-        margin-top: 1rem;
+        margin-top: 5rem;
     }
 }
 
